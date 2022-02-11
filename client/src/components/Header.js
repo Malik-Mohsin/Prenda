@@ -1,0 +1,29 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import logo from "./../images/prenda-logo.svg";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+}));
+
+const Header = () => {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <AppBar
+        position="static"
+        style={{ backgroundColor: "white", color: "black" }}
+      >
+        <Toolbar>
+          <img src={logo} alt="logo" width="200px" />
+        </Toolbar>
+      </AppBar>
+    </div>
+  );
+};
+export default Header;
